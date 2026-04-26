@@ -1,0 +1,144 @@
+.uploadLayout {
+  display: flex;
+  justify-content: center;
+}
+
+.uploadCard {
+  width: min(760px, 100%);
+  padding: 1.4rem;
+  border-radius: 16px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.headerRow h2 {
+  margin: 0;
+  color: var(--text-bright);
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-size: 1.35rem;
+}
+
+.supportedFiles {
+  border-radius: 999px;
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  color: var(--accent-soft);
+  background: rgba(8, 47, 73, 0.36);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.32rem 0.7rem;
+}
+
+.subtitle {
+  margin: 0.55rem 0 1rem;
+  color: var(--text-dim);
+}
+
+.dropzone {
+  position: relative;
+  border: 1px dashed var(--border-strong);
+  border-radius: 14px;
+  background:
+    linear-gradient(140deg, rgba(2, 132, 199, 0.15), transparent 35%),
+    rgba(10, 17, 31, 0.75);
+  transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+.dropzone:hover {
+  border-color: rgba(125, 211, 252, 0.62);
+}
+
+.dropzoneActive {
+  border-color: rgba(52, 211, 153, 0.72);
+  transform: translateY(-1px);
+  background:
+    linear-gradient(140deg, rgba(52, 211, 153, 0.2), transparent 35%),
+    rgba(10, 17, 31, 0.82);
+}
+
+.fileInput {
+  display: none;
+}
+
+.dropzoneLabel {
+  display: block;
+  cursor: pointer;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.emptyState,
+.selectedFile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.emptyState svg,
+.selectedFile svg {
+  color: var(--accent-soft);
+}
+
+.title {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+.hint {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.detail,
+.fileMeta,
+.changeHint {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.fileName {
+  color: var(--text-bright);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.errorAlert {
+  margin-top: 0.9rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(248, 113, 113, 0.38);
+  background: rgba(127, 29, 29, 0.28);
+  color: #fecaca;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.9rem;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 640px) {
+  .uploadCard {
+    padding: 1rem;
+  }
+
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropzoneLabel {
+    padding: 1.6rem 0.9rem;
+  }
+}

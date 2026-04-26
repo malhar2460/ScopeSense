@@ -1,0 +1,40 @@
+REQUEST FOR PROPOSAL (RFP)
+Program: State Analytics and Compliance Reporting Platform
+Issued By: Department of Public Administration
+
+Purpose:
+The department seeks a secure analytics platform to unify operational reporting, compliance audit evidence,
+and executive dashboards across multiple agencies.
+
+Functional Requirements:
+- Consolidated reporting across finance, procurement, and citizen service data sets
+- Role-based access controls with strict audit logging
+- Scheduled and ad-hoc dashboard publishing
+- Data retention and legal hold policy support
+
+Technical Expectations:
+- Cloud-native architecture with encrypted data at rest and in transit
+- ETL/ELT pipeline orchestration
+- Integration with enterprise identity provider
+- High-availability deployment and disaster recovery plan
+
+Security and Compliance:
+- SOC2-aligned controls
+- Regulatory audit traceability
+- Automated alerting for suspicious access patterns
+
+Timeline:
+- Vendor selection in 6 weeks
+- MVP delivery in 4 months
+- Full rollout in 8 months
+
+Risks Called Out by Department:
+- Incomplete source system data quality documentation
+- Potential delays in legal and compliance sign-off cycles
+- Scope creep risk from additional agency onboarding requests
+
+Deliverables:
+- Solution architecture and implementation roadmap
+- Working analytics platform
+- Compliance evidence package
+- Operations runbook and training materials

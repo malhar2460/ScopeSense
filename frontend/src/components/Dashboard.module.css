@@ -1,0 +1,451 @@
+.dashboard {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.noPrint {
+  display: flex;
+}
+
+.printReportHeader {
+  display: none;
+}
+
+.printEyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+.loading {
+  display: grid;
+  gap: 0.9rem;
+  place-items: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-dim);
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.headerLeft h2 {
+  margin: 0;
+  color: var(--text-bright);
+  font-size: 1.2rem;
+  word-break: break-word;
+}
+
+.metaLine {
+  margin: 0.35rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.86rem;
+}
+
+.metricsRow {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metricCard {
+  padding: 0.95rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.metricLabel {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.metricCard strong {
+  color: var(--text-bright);
+  font-size: 1.3rem;
+}
+
+.layoutGrid {
+  display: grid;
+  grid-template-columns: 1.9fr 1fr;
+  gap: 0.85rem;
+}
+
+.mainColumn,
+.sideColumn {
+  display: grid;
+  gap: 0.85rem;
+  align-content: start;
+}
+
+.sectionCard {
+  padding: 1rem;
+  border-radius: 14px;
+}
+
+.sectionCard h3 {
+  margin: 0 0 0.65rem;
+  color: var(--text-bright);
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-size: 1rem;
+}
+
+.sectionCard p {
+  margin: 0;
+  color: var(--text-main);
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.kvItem {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+
+.kvItem span {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.kvItem strong {
+  color: var(--text-bright);
+}
+
+.listBlock {
+  margin-top: 0.78rem;
+}
+
+.listBlock h4 {
+  margin: 0 0 0.4rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.listBlock ul {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.listBlock li {
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.tagWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.tag {
+  background: rgba(8, 47, 73, 0.52);
+  border: 1px solid rgba(125, 211, 252, 0.38);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  color: var(--accent-soft);
+  font-size: 0.82rem;
+}
+
+.overallRisk {
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 0.62rem 0.72rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  margin-bottom: 0.65rem;
+}
+
+.riskList {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.riskItem {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.26);
+  padding: 0.55rem 0.62rem;
+  background: rgba(15, 23, 42, 0.42);
+}
+
+.riskItem p {
+  font-size: 0.88rem;
+}
+
+.riskTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 0.35rem;
+  font-weight: 600;
+}
+
+.sectionRef {
+  margin-top: 0.35rem;
+  color: var(--text-muted) !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem !important;
+}
+
+.similarItem {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 0.62rem;
+  background: rgba(15, 23, 42, 0.4);
+  margin-bottom: 0.55rem;
+}
+
+.projectName {
+  color: var(--text-bright) !important;
+  font-weight: 600;
+}
+
+.projectScore {
+  margin-top: 0.2rem !important;
+  color: var(--accent-soft) !important;
+  font-size: 0.8rem !important;
+}
+
+.projectMeta {
+  margin-top: 0.2rem !important;
+  color: var(--text-muted) !important;
+  font-size: 0.76rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.projectSummary {
+  margin-top: 0.35rem !important;
+  color: var(--text-main) !important;
+  font-size: 0.84rem !important;
+}
+
+.emptyItem {
+  color: var(--text-muted) !important;
+  font-style: italic;
+}
+
+.riskHigh {
+  border-color: rgba(248, 113, 113, 0.6) !important;
+  color: #fecaca;
+}
+
+.riskMedium {
+  border-color: rgba(251, 191, 36, 0.58) !important;
+  color: #fde68a;
+}
+
+.riskLow {
+  border-color: rgba(74, 222, 128, 0.58) !important;
+  color: #bbf7d0;
+}
+
+@media (max-width: 1024px) {
+  .layoutGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .metricsRow {
+    grid-template-columns: 1fr;
+  }
+
+  .headerRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .headerLeft {
+    flex-direction: column;
+  }
+
+  .twoColGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  :global(.appHeader),
+  :global(.pageIntro) {
+    display: none !important;
+  }
+
+  :global(body) {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-family: 'Times New Roman', serif;
+  }
+
+  :global(.appMain) {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  .noPrint {
+    display: none !important;
+  }
+
+  .printReportHeader {
+    display: block;
+    border-bottom: 2px solid #0f172a;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .printReportHeader h1 {
+    margin: 0.1rem 0 0;
+    color: #0f172a;
+    font-size: 1.12rem;
+    font-family: 'Times New Roman', serif;
+  }
+
+  .printReportHeader p {
+    margin: 0.22rem 0 0;
+    color: #334155;
+    font-size: 0.78rem;
+  }
+
+  .dashboard {
+    gap: 0.45rem;
+    padding-bottom: 0;
+  }
+
+  .layoutGrid {
+    display: block;
+  }
+
+  .metricsRow {
+    gap: 0.3rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sectionCard,
+  .metricCard {
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    break-inside: avoid;
+  }
+
+  .sectionCard {
+    margin-bottom: 0.35rem;
+    padding: 0.55rem;
+  }
+
+  .sectionCard h3 {
+    color: #0f172a;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.35rem;
+    font-family: 'Times New Roman', serif;
+  }
+
+  .sectionCard p,
+  .listBlock li,
+  .projectSummary,
+  .metaLine {
+    color: #0f172a !important;
+  }
+
+  .metricCard {
+    padding: 0.55rem;
+  }
+
+  .metricLabel {
+    color: #475569;
+  }
+
+  .metricCard strong {
+    color: #0f172a;
+  }
+
+  .kvItem,
+  .riskItem,
+  .similarItem {
+    background: #ffffff !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  .tag {
+    background: #e2e8f0 !important;
+    border-color: #cbd5e1 !important;
+    color: #1e293b !important;
+  }
+
+  .overallRisk {
+    color: #0f172a !important;
+    border-color: #94a3b8 !important;
+    background: #f8fafc;
+  }
+
+  .riskHigh {
+    color: #991b1b !important;
+    border-color: #fca5a5 !important;
+  }
+
+  .riskMedium {
+    color: #92400e !important;
+    border-color: #fcd34d !important;
+  }
+
+  .riskLow {
+    color: #14532d !important;
+    border-color: #86efac !important;
+  }
+
+  .emptyItem {
+    color: #64748b !important;
+  }
+
+  .sectionRef {
+    color: #475569 !important;
+  }
+
+  .projectScore {
+    color: #334155 !important;
+  }
+
+  .projectMeta {
+    color: #475569 !important;
+  }
+}

@@ -1,0 +1,40 @@
+MASTER SERVICES CONTRACT
+Agreement: Managed IT Support and Operations Renewal
+Client: Apex Retail Group
+Vendor: Orbit Systems LLP
+
+Contract Term:
+Initial 24-month term with optional 12-month extension.
+
+Scope of Services:
+- 24x7 incident monitoring and response
+- Infrastructure maintenance and patching
+- On-call production support and outage remediation
+- Monthly service performance reporting
+
+Service Levels (SLA):
+- Critical incident response in 15 minutes
+- Priority-1 resolution target of 4 hours
+- Monthly uptime target: 99.95%
+
+Commercial and Legal Terms:
+- Service credits apply for SLA breaches
+- Penalty schedule escalates after three consecutive months of missed uptime targets
+- Vendor indemnifies client for data breach attributable to vendor negligence
+- Contract may be terminated for repeated material non-compliance
+
+Stakeholders and Ownership:
+- Client IT Operations Director
+- Vendor Delivery Manager
+- Security and Compliance Officer
+- Legal Counsel Review Board
+
+Dependencies:
+- Shared observability tooling access
+- Incident escalation matrix approved by both parties
+- Quarterly security audit completion
+
+Risk Highlights:
+- High legal exposure on breach-related indemnity clauses
+- Ambiguity in responsibility split for third-party cloud incidents
+- Potential dispute on SLA measurement windows if monitoring tools are inconsistent

@@ -1,0 +1,198 @@
+.appShell {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 2rem clamp(1rem, 2vw, 2.25rem) 2.5rem;
+  overflow: hidden;
+}
+
+.ambientGlow {
+  position: fixed;
+  width: min(36rem, 52vw);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  filter: blur(82px);
+  opacity: 0.28;
+  z-index: -1;
+}
+
+.ambientGlowLeft {
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.42), rgba(52, 211, 153, 0));
+  top: -16rem;
+  left: -12rem;
+}
+
+.ambientGlowRight {
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.38), rgba(56, 189, 248, 0));
+  bottom: -16rem;
+  right: -10rem;
+}
+
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.9), rgba(7, 11, 21, 0.88));
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(12px);
+}
+
+.brandWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.brandIcon {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: var(--text-bright);
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  box-shadow: 0 10px 22px rgba(34, 211, 238, 0.22);
+}
+
+.brandName {
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--text-bright);
+  line-height: 1.2;
+}
+
+.brandSubhead {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerRoute {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.routeBadge {
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  padding: 0.32rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.routeStage {
+  border-radius: 999px;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  padding: 0.32rem 0.66rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  background: rgba(8, 47, 73, 0.4);
+}
+
+.statusPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.36rem 0.72rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--accent-soft);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  background: rgba(8, 47, 73, 0.45);
+}
+
+.appMain {
+  width: min(1160px, 100%);
+  margin: 1.5rem auto 0;
+  animation: reveal 420ms ease;
+}
+
+.pageIntro {
+  margin-bottom: 1.25rem;
+}
+
+.pageIntro h1 {
+  margin: 0;
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+  font-size: clamp(1.25rem, 2.8vw, 1.9rem);
+  color: var(--text-bright);
+  letter-spacing: 0.01em;
+}
+
+.pageIntro p {
+  margin-top: 0.42rem;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  max-width: 72ch;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .appHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .headerMeta {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .statusPill {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .appShell {
+    padding: 1rem 0.75rem 1.6rem;
+  }
+
+  .appHeader {
+    padding: 0.85rem 0.95rem;
+    border-radius: 14px;
+  }
+
+  .headerMeta {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .pageIntro p {
+    font-size: 0.9rem;
+  }
+}

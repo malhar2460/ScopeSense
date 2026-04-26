@@ -1,0 +1,84 @@
+REQUEST FOR PROPOSAL (RFP)
+Project: Unified Citizen Service Portal Modernization
+Client: City of Redwood Heights
+RFP ID: RH-2026-DIGI-014
+Issue Date: April 15, 2026
+Proposal Due Date: May 20, 2026
+
+1. BUSINESS CONTEXT
+The City of Redwood Heights is seeking a delivery partner to modernize citizen-facing services currently spread across legacy web forms and manual workflows. The objective is to launch a unified digital portal that improves resident experience, reduces turnaround time for permits and requests, and provides leadership-level visibility on service KPIs.
+
+2. PROJECT GOALS
+- Create a single portal for permit requests, utility service requests, complaint submissions, and appointment scheduling.
+- Reduce average case turnaround time by 30% in year one.
+- Improve first-contact resolution with integrated knowledge workflows.
+- Meet WCAG 2.1 AA accessibility requirements.
+
+3. SCOPE OF WORK
+The selected vendor will provide end-to-end services including discovery, solution architecture, implementation, testing, deployment, training, and hypercare support.
+
+Expected delivery is structured in four phases:
+- Phase 1 (4 weeks): Discovery, process mapping, architecture blueprint.
+- Phase 2 (8 weeks): Core platform build and integrations.
+- Phase 3 (10 weeks): User acceptance testing, security hardening, and data migration.
+- Phase 4 (4 weeks): Go-live, onboarding, and stabilization.
+
+Target completion timeline: 6 months from contract signing.
+Note: City leadership has requested an accelerated 4-month launch if possible.
+
+4. TECHNICAL REQUIREMENTS
+Required technologies and capabilities:
+- Frontend: React, responsive design, multilingual support.
+- Backend APIs: FastAPI or equivalent service framework.
+- Data layer: PostgreSQL with auditable change history.
+- Infrastructure: Azure Kubernetes Service (AKS) with CI/CD.
+- Identity: Azure AD SSO and role-based access control.
+- Observability: centralized logging, metrics dashboards, and alerting.
+- Analytics: Power BI integration for executive reporting.
+
+The vendor must expose secure APIs for integration with:
+- Existing ERP billing system.
+- GIS mapping service for location-based requests.
+- State-level identity verification service.
+
+5. DELIVERABLES
+- Discovery and solution design document.
+- Architecture decision record (ADR) package.
+- Working citizen portal with role-based workflows.
+- API integration layer and interface contracts.
+- Automated test suite and release pipeline.
+- Security and compliance assessment report.
+- Training materials and administrator playbook.
+
+6. STAKEHOLDERS
+Key stakeholders include:
+- Priya Raman, Chief Information Officer (Executive Sponsor)
+- Daniel Ortiz, Director of Citizen Services (Business Owner)
+- Aisha Khan, PMO Lead (Program Governance)
+- Leo Murphy, Security and Compliance Lead
+- Procurement Steering Committee
+
+7. DEPENDENCIES AND ASSUMPTIONS
+- Access to ERP integration documentation by project week 2.
+- Availability of GIS sandbox credentials before sprint 3.
+- State identity API contract finalized before Phase 2 completion.
+- Legal approval for data retention policy updates.
+
+8. ACCEPTANCE CRITERIA
+The selected partner must define measurable acceptance criteria for each module and workflow. Current RFP sections list expected outcomes but do not yet include threshold-based test metrics for every citizen journey.
+
+9. RISK CONSIDERATIONS
+Potential concerns identified by the City:
+- Compressed schedule may conflict with mandatory security testing windows.
+- Third-party state identity API currently has unstable response times.
+- Legacy ERP integration behavior is partially undocumented.
+- Budget penalties apply if SLA targets are missed for two consecutive months post go-live.
+- Non-compliance with privacy obligations may trigger legal and contractual action.
+
+10. PROPOSAL INSTRUCTIONS
+Vendors must include:
+- Team structure, named roles, and delivery governance model.
+- Detailed timeline with critical path assumptions.
+- Risk mitigation approach and contingency planning.
+- Cost breakdown by phase and support period.
+- At least two comparable government or public-sector implementation references.

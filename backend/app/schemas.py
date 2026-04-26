@@ -1,9 +1,16 @@
+from typing import Any, Dict, List, Literal, Optional
+
 from pydantic import BaseModel, Field
-from typing import List, Optional, Dict, Any
+
+DocumentType = Literal["RFP", "SOW", "Contract", "Proposal", "General Requirement Note", "Unknown"]
+RiskLevel = Literal["High", "Medium", "Low", "Unknown"]
 
 class DocumentClassification(BaseModel):
-    document_type: str = Field(description="The type of document, e.g., RFP, SOW, Contract, Proposal, General Requirement")
-    confidence: float = Field(description="Confidence score between 0 and 1")
+    document_type: DocumentType = Field(
+        default="Unknown",
+        description="The type of document, e.g., RFP, SOW, Contract, Proposal, General Requirement Note",
+    )
+    confidence: float = Field(default=0.0, ge=0.0, le=1.0, description="Confidence score between 0 and 1")
 
 class ExtractedEntities(BaseModel):
     client_name: Optional[str] = Field(None, description="Name of the client if mentioned")
@@ -14,13 +21,13 @@ class ExtractedEntities(BaseModel):
     dependencies: List[str] = Field(default_factory=list, description="Dependencies or prerequisites")
 
 class RiskFlag(BaseModel):
-    risk_level: str = Field(description="High, Medium, or Low")
+    risk_level: RiskLevel = Field(default="Unknown", description="High, Medium, Low, or Unknown")
     description: str = Field(description="Description of the risk (e.g., missing acceptance criteria)")
     section: Optional[str] = Field(None, description="The section of the document where this risk applies")
 
 class RiskAssessment(BaseModel):
     risks: List[RiskFlag] = Field(default_factory=list, description="List of identified risks")
-    overall_risk_score: str = Field(description="Overall risk level: High, Medium, or Low")
+    overall_risk_score: RiskLevel = Field(default="Unknown", description="Overall risk level")
 
 class DocumentSummary(BaseModel):
     business_summary: str = Field(description="A concise summary of the document for non-technical teams")
@@ -33,3 +40,18 @@ class DocumentAnalysisResult(BaseModel):
     risk_assessment: Optional[RiskAssessment] = None
     summary: Optional[DocumentSummary] = None
     similar_projects: List[Dict[str, Any]] = Field(default_factory=list, description="List of similar past projects")
+
+class JobResponse(BaseModel):
+    job_id: str
+    message: str
+
+class JobStatusResponse(BaseModel):
+    job_id: str
+    status: Literal["processing", "completed", "failed"]
+    current_step: Optional[str] = None
+    progress: int = Field(default=0, ge=0, le=100)
+    message: Optional[str] = None
+    result: Optional[DocumentAnalysisResult] = None
+    error: Optional[str] = None
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None

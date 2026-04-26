@@ -1,0 +1,43 @@
+PROPOSAL
+Project: Healthcare Contact Center Transformation
+Prepared For: Meridian Health Network
+Prepared By: BrightPath Digital
+
+Executive Summary:
+BrightPath proposes a phased modernization of Meridian's patient contact center operations to improve service speed,
+quality, and reporting visibility.
+
+Proposed Outcomes:
+- Shorter patient wait times
+- Improved first-contact resolution
+- Enhanced care navigation quality
+
+Approach:
+Phase 1: discovery and operating model alignment
+Phase 2: platform implementation and integrations
+Phase 3: adoption, training, and optimization
+
+Solution Components:
+- Omnichannel contact platform
+- CRM integration for patient context
+- Workflow automation for callbacks and escalations
+- Analytics dashboards for service leaders
+
+Key Stakeholders:
+- VP Patient Services
+- Contact Center Director
+- Clinical Operations Representative
+- Data and Integration Lead
+
+Technology Stack:
+Cloud contact center platform, API integration layer, reporting warehouse, BI dashboards.
+
+Dependencies and Constraints:
+- Access to current call routing configuration
+- Availability of integration SMEs during design workshops
+- Final data retention policy approval from governance board
+
+Risk Considerations:
+- Adoption risk if training is delayed
+- Data mapping issues between legacy systems and new CRM model
+- Possible timeline pressure if integration decisions are deferred

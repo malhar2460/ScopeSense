@@ -1,0 +1,46 @@
+REQUEST FOR PROPOSAL (RFP)
+Project: Unified Citizen Service Portal
+Client: City of Redwood Heights
+RFP ID: RH-2026-DIGI-014
+
+Business Objective:
+The city seeks a single digital portal for permits, utility requests, incident reporting, and appointment scheduling.
+The platform must improve service turnaround, transparency, and citizen satisfaction.
+
+Scope:
+- Discovery and architecture blueprint
+- Portal design and implementation
+- API integration with ERP billing and GIS service
+- Security hardening and UAT support
+- Go-live stabilization and training
+
+Timeline:
+Target completion in 6 months from contract signing.
+Leadership has requested an accelerated 4-month launch if feasible.
+
+Required Technologies:
+React, FastAPI, PostgreSQL, Azure Kubernetes Service, Azure AD SSO, Power BI integration.
+
+Stakeholders:
+- Priya Raman (CIO, Executive Sponsor)
+- Daniel Ortiz (Director of Citizen Services)
+- Aisha Khan (PMO Lead)
+- Leo Murphy (Security and Compliance Lead)
+
+Dependencies:
+- ERP interface documentation by week 2
+- GIS sandbox credentials before sprint 3
+- State identity API contract finalization
+
+Risk Notes:
+- Compressed schedule may conflict with mandatory security testing windows
+- Third-party identity API has unstable response times
+- Penalties apply if SLA targets are missed for two consecutive months
+
+Deliverables:
+- Solution design document
+- Working citizen portal
+- Integration API contracts
+- Automated test suite and release pipeline
+- Security and compliance report
+- Training and operations handbook

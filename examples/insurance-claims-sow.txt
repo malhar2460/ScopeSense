@@ -1,0 +1,46 @@
+STATEMENT OF WORK (SOW)
+Project: Insurance Claims Workflow Rebuild
+Client: NorthStar Mutual Insurance
+
+Overview:
+NorthStar requires redesign of its claims intake and adjudication workflow. The existing process is email-driven,
+contains duplicate data entry, and causes delays in high-volume periods.
+
+Objectives:
+- Reduce claim intake cycle time by 25 percent
+- Improve data quality and auditability
+- Standardize approval and escalation workflows
+
+Workstreams:
+1) Process discovery and user journey mapping
+2) New claims portal and case management screens
+3) Backend workflow engine and rules automation
+4) Integration with policy administration APIs
+5) Reporting dashboards for operations leadership
+
+Technology Expectations:
+React frontend, FastAPI services, PostgreSQL, Redis queueing, containerized deployment on Kubernetes.
+
+Timeline:
+- Discovery: 3 weeks
+- Build and integration: 9 weeks
+- UAT and hardening: 4 weeks
+- Production rollout: 2 weeks
+Total estimated duration: 18 weeks.
+
+Stakeholders:
+- Program Director, Claims Operations
+- Enterprise Architect
+- Security Governance Lead
+- Data Engineering Manager
+
+Dependencies:
+- Access to legacy policy APIs
+- Data mapping sign-off from data governance council
+- UAT environment readiness before week 10
+
+Acceptance Criteria:
+Must include measurable metrics for first-pass adjudication success and exception queue reduction.
+
+Risks:
+Potential delays if legacy API rate limits are not adjusted before full volume testing.

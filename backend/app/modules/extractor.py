@@ -1,34 +1,41 @@
-import os
-from langchain_groq import ChatGroq
 from app.schemas import ExtractedEntities
-from langchain_core.prompts import PromptTemplate
+from app.modules.base_llm import StructuredGroqClient, cleaned_excerpt
 
 class EntityExtractor:
     def __init__(self):
-        self.llm = ChatGroq(
-            model="qwen-2.5-32b", 
-            api_key=os.getenv("GROQ_API_KEY"),
-            temperature=0.1
-        )
-        self.structured_llm = self.llm.with_structured_output(ExtractedEntities)
+        self.client = StructuredGroqClient(ExtractedEntities, temperature=0.05)
 
     async def extract(self, text: str) -> ExtractedEntities:
+        excerpt = cleaned_excerpt(text, 7000)
         prompt = f"""
-        Extract the following entities from the document text:
-        - Client Name
-        - Timeline or duration
-        - Deliverables
-        - Technologies or platforms mentioned
-        - Stakeholders or key roles
-        - Dependencies or prerequisites
+        Extract entities from this procurement document text.
 
-        Document Text (first 5000 chars):
-        {text[:5000]}
+        Output constraints:
+        - Include only values that are explicitly present in the text.
+        - Keep lists concise and deduplicated.
+        - If uncertain, return null for fields or [] for lists.
+
+        Extract:
+        - client_name
+        - timeline
+        - deliverables
+        - technologies
+        - stakeholders
+        - dependencies
+
+        Document text:
+        {excerpt}
         """
-        
+
         try:
-            result = await self.structured_llm.ainvoke(prompt)
+            result = await self.client.invoke(prompt)
+
+            # Normalize list fields to remove duplicates while preserving order.
+            result.deliverables = list(dict.fromkeys(result.deliverables))
+            result.technologies = list(dict.fromkeys(result.technologies))
+            result.stakeholders = list(dict.fromkeys(result.stakeholders))
+            result.dependencies = list(dict.fromkeys(result.dependencies))
+
             return result
-        except Exception as e:
-            print(f"Extraction Error: {e}")
+        except Exception:
             return ExtractedEntities()

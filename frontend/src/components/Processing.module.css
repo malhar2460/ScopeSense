@@ -1,0 +1,123 @@
+.processingLayout {
+  display: flex;
+  justify-content: center;
+}
+
+.processingCard,
+.errorCard {
+  width: min(760px, 100%);
+  padding: 1.4rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.statusIcon {
+  margin-bottom: 0.65rem;
+  color: var(--accent-soft);
+}
+
+.processingCard h2,
+.errorCard h2 {
+  margin: 0;
+  color: var(--text-bright);
+  font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+.message {
+  margin: 0.55rem auto 0.9rem;
+  color: var(--text-dim);
+  max-width: 55ch;
+}
+
+.progressShell {
+  width: 100%;
+  height: 0.8rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(30, 41, 59, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, #22d3ee, #34d399);
+  transition: width 220ms ease;
+}
+
+.progressValue {
+  margin: 0.42rem 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.stepGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 10px;
+  padding: 0.52rem 0.6rem;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  font-size: 0.84rem;
+}
+
+.stepDone {
+  background: rgba(6, 78, 59, 0.32);
+  border-color: rgba(52, 211, 153, 0.44);
+  color: #d1fae5;
+}
+
+.stepPending {
+  background: rgba(15, 23, 42, 0.45);
+  color: var(--text-muted);
+}
+
+.stepIndex {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(148, 163, 184, 0.2);
+}
+
+.errorCard {
+  color: #fecaca;
+  border-color: rgba(248, 113, 113, 0.4);
+  background: linear-gradient(165deg, rgba(127, 29, 29, 0.32), rgba(15, 23, 42, 0.88));
+}
+
+.errorCard p {
+  color: #fecaca;
+}
+
+.spinner {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .processingCard,
+  .errorCard {
+    padding: 1rem;
+  }
+
+  .stepGrid {
+    grid-template-columns: 1fr;
+  }
+}
